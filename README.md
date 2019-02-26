@@ -46,12 +46,12 @@ The goal of running **MonoPhylo** is to determine which groupings are monophylet
 
 In addition to the instructions posted here, two complete example analyses can be found in the [Example-data](https://github.com/dportik/MonoPhylo/tree/master/Example-data) folder. The complete set of input files and output files generated for each step, along with instructions, can be found for each analysis folder present.
 
-Quick Navigation:
+**Quick Navigation for Instructions:**
 
-### [Obtaining a list of tree tips](#OLTP)
-### [Defining groups for the tip labels](#DGTP)
-### [Ensuring the tree is properly rooted](#ETPR)
-### [Assessing the phylogenetic status of groups](#APSG)
++ [**Obtaining a list of tree tips**](#OLTP)
++ [Defining groups for the tip labels](#DGTP)
++ [Ensuring the tree is properly rooted](#ETPR)
++ [Assessing the phylogenetic status of groups](#APSG)
 
 
 ### 1. Obtaining a list of tree tips <a name="OLTP"></a>
