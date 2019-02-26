@@ -31,9 +31,9 @@ The current release of **MonoPhylo** is v1.0.
 
 The goal of running **MonoPhylo** is to determine which groupings are monophyletic in a given phylogenetic tree. In order to achieve this, it is necessary to first obtain a list of the tips in the tree and subsequently define the groups. It is also important to ensure the phylogenetic tree is properly rooted for the analysis, otherwise the groupings may not be correctly assessed. Finally, using a file that defines the major groupings, the groups can be assessed for the given phylogenetic tree. Instructions for completing each of these major tasks can be found below. 
 
-### 1. Obtaining a list of tree tips:
+### 1. Obtaining a list of tree tips
 
-#### Trees containing any type of tip label
+#### Trees containing any type of tip label:
 
 Phylogenetic trees can have many kinds of labels, including taxon names, accession numbers, or other unique identifiers. To obtain an output file containing a list of tips sorted alphabetically, **MonoPhylo** can be used the following way:
 
@@ -75,7 +75,7 @@ Agama_africana
 ...
 ```
 
-#### Trees containing tip labels representing taxon names
+#### Trees containing tip labels representing taxon names:
 
 If the tip labels in the tree are formatted in a way that is consistent with binomial or trinomial taxon names (`Genus_species` and/or `Genus_species_subspecies`), then an additional feature can be used for this step. Rather than outputting a list of tip labels, the output will include tip labels and genus labels. Here is an example of how to use this feature:
 
@@ -132,7 +132,7 @@ Agama
 ...
 ```
 
-### 2. Defining groups for the tip labels:
+### 2. Defining groups for the tip labels
 
 Once an output file containing the tip labels is obtained, the next step is to use this file to construct a map file. The map file will define the groups to test. The map file should be in tab-delimited format. The first column will have a complete list of the tips in the tree (labeled Tips or Species depending on the option used to generate the tip labels file). Any additional column added allows for a grouping to be set. If the `--genus` flag was used, the second column will automatically contain the genera groupings. The column can be used to represent any type of taxon grouping (sub-family, family, super-family, order) or custom-defined group. Members of a particular group should be assigned the same group name for a given column, and any tip not assigned to a group for that column should be assigned a `NA` value.
 
@@ -163,7 +163,7 @@ The map file can contain more taxa than are actually present in the tree. Only t
 How you make the map file is ultimately up to you, but it might be helpful to use a spreadsheet editor (such as Excel) to add columns and values. Regardless of how the file is constructed, it must be tab-delimited. Sometimes using Excel or other applications to generate tab-delmited text file will include hidden characters, so make sure to open the file in a text editor and ensure the format includes Unix line breaks (line breaks marked by `\n`, rather than `\r\n`) and UTF-8 encoding. This will ensure that **MonoPhylo** can parse the file correctly.
 
 
-### 3. Ensuring the tree is properly rooted:
+### 3. Ensuring the tree is properly rooted
 
 To correctly assess whether groupings are monophyletic, it is important to ensure that the phylogenetic tree is properly rooted. If the tree is unrooted, **MonoPhylo** can be used to correctly root the tree based on the MRCA of a set of taxa/tip labels (minimally two, but up to five taxa). The tip labels must be present in the tree, or an error will be thrown. The tree can be written to an output tree file and inspected to ensure the root placement is correct. The rooted tree file can be used for analysis. Here is an example of how to use **MonoPhylo** to root a tree:
 
@@ -202,7 +202,7 @@ python MonoPhylo.py -t bin/Analysis/RAxML_bestTree.Iguania.tre -o bin/Analysis/O
 
 The above command will root the tree file `RAxML_bestTree.Iguania.tre` using the MRCA of `Acanthocercus_adramitanus` and `Agama_africana`. Note that in this case, no output files will be created in the specified output directory.
 
-#### Writing the rooted tree to an output tree file
+#### Writing the rooted tree to an output tree file:
 
 To write the rooted tree to an output file, an additional flag must be included (`--write_root`). For example:
 
@@ -218,7 +218,7 @@ python MonoPhylo.py -t bin/Analysis/RAxML_bestTree.Iguania.tre -o bin/Analysis/O
 
 The above command will root the tree file `RAxML_bestTree.Iguania.tre` using the MRCA of `Acanthocercus_adramitanus` and `Agama_africana`. Note that in this case, a rooted tree file called `Rooted_RAxML_bestTree.Iguania.tre` will be created in the specified output directory.
 
-#### Including additional taxa in the set for rooting
+#### Including additional taxa in the set for rooting:
 
 The rooting procedure will find the MRCA of a set of taxa and use it to root the phylogeny. This requires a minimum of two taxa, but up to five taxa can be included in the set used to identify the MRCA. To include more than two taxa, the optional `--tip3`, `--tip4`, and `--tip5` flags can be used:
 
