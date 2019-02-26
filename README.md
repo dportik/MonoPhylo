@@ -44,7 +44,7 @@ MonoPhylo is written and maintained by Daniel Portik (daniel.portik@gmail.com)
 
 The goal of running **MonoPhylo** is to determine which groupings are monophyletic in a given phylogenetic tree. In order to achieve this, it is necessary to first obtain a list of the tips in the tree and subsequently define the groups. It is also important to ensure the phylogenetic tree is properly rooted for the analysis, otherwise the groupings may not be correctly assessed. Finally, using a file that defines the major groupings, the groups can be assessed for the given phylogenetic tree. Instructions for completing each of these major tasks can be found below. 
 
-In addition to the instructions posted here, two complete example analyses can be found in the [Example-data folder](https://github.com/dportik/MonoPhylo/tree/master/Example-data). The complete set of input files and output files generated for each step, along with instructions, can be found for each analysis folder present.
+In addition to the instructions posted here, two complete example analyses can be found in the [Example-data](https://github.com/dportik/MonoPhylo/tree/master/Example-data) folder. The complete set of input files and output files generated for each step, along with instructions, can be found for each analysis folder present.
 
 
 ### 1. Obtaining a list of tree tips
@@ -93,7 +93,7 @@ Agama_africana
 
 #### Trees containing tip labels representing taxon names:
 
-If the tip labels in the tree are formatted in a way that is consistent with binomial or trinomial taxon names (`Genus_species` and/or `Genus_species_subspecies`), then an additional feature can be used for this step. Rather than outputting a list of tip labels, the output will include tip labels and genus labels. Here is an example of how to use this feature:
+If the tip labels in the tree are formatted in a way that is consistent with binomial or trinomial taxon names (`Genus_species` and/or `Genus_species_subspecies`), then an additional flag (`--genus`) can be used for this step. Rather than outputting a list of tip labels, the output will include the genus and species labels. Here is an example of how to use this feature:
 
 ```
 python MonoPhylo.py -t <tree file> -o <output directory> --write_tips --genus
@@ -138,7 +138,7 @@ Agama_africana	Agama
 ...
 ```
 
-Notice that rather than containing a single column labeled *Tip*, there are now two columns labeled *Species* and *Genus* with the correct contents. The `Genus_List.txt` is similar to this file, but will only have a single column representing the unique genera entries:
+Notice that rather than containing a single column labeled *Tip*, there are now two columns labeled *Species* and *Genus* with the correct contents. The `Genus_List.txt` is similar to this file, but will only have a single column containing a list of all unique genera:
 
 ```
 Genus
@@ -150,7 +150,7 @@ Agama
 
 ### 2. Defining groups for the tip labels
 
-Once an output file containing the tip labels is obtained, the next step is to use this file to construct a map file. The map file will define the groups to test. The map file should be in tab-delimited format. The first column will have a complete list of the tips in the tree (labeled Tips or Species depending on the option used to generate the tip labels file). Any additional column added allows for a grouping to be set. If the `--genus` flag was used, the second column will automatically contain the genera groupings. The column can be used to represent any type of taxon grouping (sub-family, family, super-family, order) or custom-defined group. Members of a particular group should be assigned the same group name for a given column, and any tip not assigned to a group for that column should be assigned a `NA` value.
+Once an output file containing the tip labels is obtained, the next step is to use this file to construct a map file. The map file will define the groups to test. The map file should be in tab-delimited format. The first column will have a complete list of the tips in the tree (labeled *Tips* or *Species* depending on the option used to generate the tip labels file). Any additional column added allows for a grouping to be set. If the `--genus` flag was used to generate the tip label file, the second column will automatically contain the genus groupings. The additional columns can be used to represent any type of taxon grouping (sub-family, family, super-family, order) or any custom-defined group. Members belonging to a particular group should be assigned the same group name for a given column, and all tips not assigned to any group for that column should be assigned a `NA` value.
 
 Here is an example of the contents of a map file I generated:
 
@@ -172,16 +172,16 @@ Anolis_aeneus	Anolis	Dactyloidae	NA	Pleurodonta
 ...
 ```
 
-In this example map file I labeled the columns according to a particular taxonomic level, and the groupings matched those levels. Note that there was no SubFamily assigned to the genus Anolis, and that the `NA` value was used instead. The `NA` value will exclude a tip from being assigned to any grouping for that category. This is useful for outgroups, which can be assigned `NA` across all columns and be excluded from analysis. 
+In this example map file I labeled the columns according to a particular taxonomic level, and the groupings matched those levels. Note that there was no *SubFamily* value assigned to the genus `Anolis`, and the `NA` value was used instead. The `NA` value will exclude a tip from being assigned to any grouping for that category. This is useful for outgroups, which can be assigned `NA` across all columns and be excluded from analysis. In this sense, a group category (column) does not require information for each of the tips. 
 
-The map file can contain more taxa than are actually present in the tree. Only taxon names that match those found in the tree will be included in the analysis. However, it is extremely important that all taxa present in the tree that belong to a particular group are included in the map file, otherwise the group cannot be found as monophyletic. This is why it makes the most sense to construct the map file from the tip labels output file created by **MonoPhylo**.
+The map file can contain more taxa than are actually present in the tree. Only taxon names that match those found in the tree will be included in the analysis. However, it is extremely important that all taxa present in the tree that belong to a particular group are included in the map file, otherwise the group can never be found as monophyletic (because some members are missing). This is why it makes the most sense to construct the map file from the tip labels output file created by **MonoPhylo**.
 
-How you make the map file is ultimately up to you, but it might be helpful to use a spreadsheet editor (such as Excel) to add columns and values. Regardless of how the file is constructed, it must be tab-delimited. Sometimes using Excel or other applications to generate tab-delmited text file will include hidden characters, so make sure to open the file in a text editor and ensure the format includes Unix line breaks (line breaks marked by `\n`, rather than `\r\n`) and UTF-8 encoding. This will ensure that **MonoPhylo** can parse the file correctly.
+How you make the map file is ultimately up to you, but it might be helpful to use a spreadsheet editor (such as Excel) to add columns and values. Regardless of how the file is constructed, the final format must be tab-delimited. Sometimes using Excel or other applications to generate a tab-delmited text file will include hidden characters, so make sure to open the output file in a text editor and ensure UTF-8 encoding and Unix line breaks (line breaks marked by `\n`, rather than `\r\n`). This will allow **MonoPhylo** to parse the file correctly.
 
 
 ### 3. Ensuring the tree is properly rooted
 
-To correctly assess whether groupings are monophyletic, it is important to ensure that the phylogenetic tree is properly rooted. If the tree is unrooted, **MonoPhylo** can be used to correctly root the tree based on the MRCA of a set of taxa/tip labels (minimally two, but up to five taxa). The tip labels must be present in the tree, or an error will be thrown. The tree can be written to an output tree file and inspected to ensure the root placement is correct. The rooted tree file can be used for analysis. Here is an example of how to use **MonoPhylo** to root a tree:
+To correctly assess whether groupings are monophyletic, it is important to ensure that the phylogenetic tree is properly rooted. If the tree is unrooted, **MonoPhylo** can be used to correctly root the tree based on the MRCA of a set of taxa/tip labels (minimally two, but up to five taxa). The tip labels must be present in the tree, or an error will be thrown. The tip labels output file can be used to identify the labels for this step. The tree can be written to an output tree file and inspected to ensure the root placement is correct. The rooted tree file can also be used for analysis. If the input tree file contains support values, these will be preserved in the rooted tree file. Here is an example of how to use **MonoPhylo** to root a tree:
 
 ```
 python MonoPhylo.py -t <tree file> -o <output directory> --root --tip1 <tip/taxon label> --tip2 <tip/taxon label>
@@ -239,7 +239,7 @@ The above command will root the tree file `RAxML_bestTree.Iguania.tre` using the
 The rooting procedure will find the MRCA of a set of taxa and use it to root the phylogeny. This requires a minimum of two taxa, but up to five taxa can be included in the set used to identify the MRCA. To include more than two taxa, the optional `--tip3`, `--tip4`, and `--tip5` flags can be used:
 
 ```
-python MonoPhylo.py -t <tree file> -o <output directory> --root --tip1 <tip/taxon label> --tip2 <tip/taxon label> --tip3 <tip/taxon label> --tip4 <tip/taxon label> --tip4 <tip/taxon label> --write_root
+python MonoPhylo.py -t <tree file> -o <output directory> --root --tip1 <tip/taxon label> --tip2 <tip/taxon label> --tip3 <tip/taxon label> --tip4 <tip/taxon label> --tip5 <tip/taxon label> --write_root
 ```
 
 #### Example Use:
@@ -247,13 +247,118 @@ python MonoPhylo.py -t <tree file> -o <output directory> --root --tip1 <tip/taxo
 ```
 python MonoPhylo.py -t bin/Analysis/RAxML_bestTree.Iguania.tre -o bin/Analysis/Output1/ --root --tip1 Acanthocercus_adramitanus --tip2 Agama_africana --tip3 Amblyrhynchus_cristatus --tip4 Tropidurus_semitaeniatus --write_root
 ```
-The above command will root the tree file `RAxML_bestTree.Iguania.tre` using the MRCA of `Acanthocercus_adramitanus`, `Agama_africana`, `Amblyrhynchus_cristatus`, and `Tropidurus_semitaeniatus`. Note that in this case, a rooted tree file called `Rooted_RAxML_bestTree.Iguania.tre` will be created in the specified output directory.
+The above command will root the tree file `RAxML_bestTree.Iguania.tre` using the MRCA of four taxa: `Acanthocercus_adramitanus`, `Agama_africana`, `Amblyrhynchus_cristatus`, and `Tropidurus_semitaeniatus`. In this case, the `--write_root` flag specifies a rooted tree file called `Rooted_RAxML_bestTree.Iguania.tre` will be created in the specified output directory.
 
 
 ### 4. Assessing the phylogenetic status of groups:
 
+Once a map file has been constructed and the tree is properly rooted, the defined groups can be assessed. There are two types of analyses, which only vary in whether the input tree contains support values or not. For each group category (e.g., a column in the map file), an output file will be created. In addition, the results across all group categories can be found in the output file labeled `All_Groups_results.txt`. The results files for each group category will contain the following columns of information:
+
++ **Grouping** - The name of the group, as indicated in the map file.
++ **Number_Contained_Taxa** - The number of taxa contained in the group. This number includes only the taxa that were found in the tree.
++ **Monophyletic** - A value of `True` or `False` will be assigned based on whether the grouping was found to be monophyletic. If the group contained only a single taxon, a value of `NA` is assigned instead.
++ **Category** - Possible values include `Monophyletic`, `Paraphyletic`, and `Polyphyletic`. If the group contained only a single taxon, a value of `NA` is assigned instead.
++ **Support** - If the tree contains support values for nodes and this option is invoked, the support value will be listed for groups found to be monophyletic. If the group is paraphyletic, polyphyletic, or contains only a single taxon, a value of `NA` is assigned instead.
++ **Number_Interfering_Species** - If the group is paraphyletic or polyphyletic, the **NUMBER** of additional taxa that must be included to make the group monophyletic is listed. This is the number of taxa that are 'interfering' with the monophyly of the group. If the group is monophyletic, this value will be 0. 
++ **Interfering_Species** - If the group is paraphyletic or polyphyletic, the **NAMES** of the additional taxa that must be included to make the group monophyletic are listed. These are the names of the taxa that are 'interfering' with the monophyly of the group. If the group is monophyletic, this column will be blank.
+
+Instructions for running the analysis for both tree types are provided below.
+
+#### Assessing groups in trees without support values:
+
+To run the analysis for a tree without support values for nodes, the following command can be used:
+
+```
+python MonoPhylo.py -t <tree file> -o <output directory> -m <map file>
+```
+
+#### Argument Explanations:
+
+##### `-t <path-to-file>`
+
+> The full path to a file that contains a phylogenetic tree in NEWICK format.
+
+##### `-o <path-to-directory>`
+
+> The full path to an existing directory to write the output files.
+
+##### `-m`
+
+> The full path to a map file that contains the tip/taxon labels and their corresponding groupings.
 
 
+#### Example Use:
 
+```
+python MonoPhylo.py -t bin/Analysis/Rooted_RAxML_bestTree.Iguania.tre -o bin/Analysis/Output1/ -m bin/Analysis/Iguania_groupings.txt
+```
+
+The above command will assess all groupings defined in `Iguania_groupings.txt` in the tree file `Rooted_RAxML_bestTree.Iguania.tre`. All output files will be created in the specified output directory.
+
+In this usage the output files will not contain any information about support values, because we did not include the `--support` flag. Here is an example of the truncated contents from one of the results files (in this case genera):
+
+```
+Grouping	Number_Contained_Taxa	Monophyletic	Category	Number_Interfering_Species	Interfering_Species
+Acanthocercus	5	FALSE	Polyphyletic	10	Agama_robecchii, Pseudotrapelus_aqabensis, Pseudotrapelus_chlodnickii, Pseudotrapelus_dhofarensis, Pseudotrapelus_jensvindumi, Pseudotrapelus_neumanni, Pseudotrapelus_sinaitus, Xenagama_batillifera, Xenagama_taylori, Xenagama_wilmsi
+Acanthosaura	4	TRUE	Monophyletic	0	
+Agama	38	FALSE	Polyphyletic	14	Acanthocercus_adramitanus, Acanthocercus_annectens, Acanthocercus_atricollis, Acanthocercus_cyanogaster, Acanthocercus_yemensis, Pseudotrapelus_aqabensis, Pseudotrapelus_chlodnickii, Pseudotrapelus_dhofarensis, Pseudotrapelus_jensvindumi, Pseudotrapelus_neumanni, Pseudotrapelus_sinaitus, Xenagama_batillifera, Xenagama_taylori, Xenagama_wilmsi
+Amblyrhynchus	1	NA	NA	0	
+Amphibolurus	2	TRUE	Monophyletic	0	
+Anisolepis	2	TRUE	Monophyletic	0	
+Anolis	324	TRUE	Monophyletic	0	
+Aphaniotis	1	NA	NA	0	
+Archaius	1	NA	NA	0	
+Basiliscus	4	TRUE	Monophyletic	0	
+```
+
+#### Assessing groups in trees containing support values::
+
+To run the analysis for a tree without support values for nodes, the following command can be used:
+
+```
+python MonoPhylo.py -t <tree file> -o <output directory> -m <map file> --support
+```
+
+#### Argument Explanations:
+
+##### `-t <path-to-file>`
+
+> The full path to a file that contains a phylogenetic tree in NEWICK format.
+
+##### `-o <path-to-directory>`
+
+> The full path to an existing directory to write the output files.
+
+##### `-m`
+
+> The full path to a map file that contains the tip/taxon labels and their corresponding groupings.
+
+##### `--support`
+
+> A flag indicating the input tree contains support values and that they should be included in the output files.
+
+#### Example Use:
+
+```
+python MonoPhylo.py -t bin/Analysis/Rooted_RAxML_bipartitions.Iguania.tre -o bin/Analysis/Output1/ -m bin/Analysis/Iguania_groupings.txt --support
+```
+
+The above command will assess all groupings defined in `Iguania_groupings.txt` in the tree file `Rooted_RAxML_bipartitions.Iguania.tre`. All output files will be created in the specified output directory.
+
+In this usage the output files will contain an additional column with information about support values, because we used the `--support` flag. Here is an example of the truncated contents from one of the results files (in this case genera):
+
+```
+Grouping	Number_Contained_Taxa	Monophyletic	Category	Support	Number_Interfering_Species	Interfering_Species
+Acanthocercus	5	FALSE	Polyphyletic	NA	10	Agama_robecchii, Pseudotrapelus_aqabensis, Pseudotrapelus_chlodnickii, Pseudotrapelus_dhofarensis, Pseudotrapelus_jensvindumi, Pseudotrapelus_neumanni, Pseudotrapelus_sinaitus, Xenagama_batillifera, Xenagama_taylori, Xenagama_wilmsi
+Acanthosaura	4	TRUE	Monophyletic	100	0	
+Agama	38	FALSE	Polyphyletic	NA	14	Acanthocercus_adramitanus, Acanthocercus_annectens, Acanthocercus_atricollis, Acanthocercus_cyanogaster, Acanthocercus_yemensis, Pseudotrapelus_aqabensis, Pseudotrapelus_chlodnickii, Pseudotrapelus_dhofarensis, Pseudotrapelus_jensvindumi, Pseudotrapelus_neumanni, Pseudotrapelus_sinaitus, Xenagama_batillifera, Xenagama_taylori, Xenagama_wilmsi
+Amblyrhynchus	1	NA	NA	NA	0	
+Amphibolurus	2	TRUE	Monophyletic	100	0	
+Anisolepis	2	TRUE	Monophyletic	100	0	
+Anolis	324	TRUE	Monophyletic	95	0	
+Aphaniotis	1	NA	NA	NA	0	
+Archaius	1	NA	NA	NA	0	
+Basiliscus	4	TRUE	Monophyletic	96	0	
+```
 
 
