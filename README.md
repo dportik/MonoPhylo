@@ -48,10 +48,10 @@ In addition to the instructions posted here, two complete example analyses can b
 
 Quick Navigation:
 
-+ [Obtaining a list of tree tips](#OLTP)
-+ [Defining groups for the tip labels](#DGTP)
-+ [Ensuring the tree is properly rooted](#ETPR)
-+ [Assessing the phylogenetic status of groups](#APSG)
+### [Obtaining a list of tree tips](#OLTP)
+### [Defining groups for the tip labels](#DGTP)
+### [Ensuring the tree is properly rooted](#ETPR)
+### [Assessing the phylogenetic status of groups](#APSG)
 
 
 ### 1. Obtaining a list of tree tips <a name="OLTP"></a>
