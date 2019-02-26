@@ -1,0 +1,15 @@
+Grouping	Number_Contained_Taxa	Monophyletic	Category	Support	Number_Interfering_Species	Interfering_Species
+Agamidae	325	True	Monophyletic	89.0	0	
+Chamaeleonidae	188	True	Monophyletic	100.0	0	
+Corytophanidae	8	True	Monophyletic	100.0	0	
+Crotaphytidae	12	True	Monophyletic	100.0	0	
+Dactyloidae	324	True	Monophyletic	95.0	0	
+Hoplocercidae	16	True	Monophyletic	100.0	0	
+Iguanidae	37	True	Monophyletic	83.0	0	
+Leiocephalidae	15	True	Monophyletic	96.0	0	
+Leiosauridae	27	True	Monophyletic	100.0	0	
+Liolaemidae	226	True	Monophyletic	77.0	0	
+Opluridae	7	True	Monophyletic	100.0	0	
+Phrynosomatidae	134	True	Monophyletic	100.0	0	
+Polychrotidae	8	True	Monophyletic	99.0	0	
+Tropiduridae	99	True	Monophyletic	98.0	0	
