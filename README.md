@@ -12,10 +12,7 @@
 
 + Check the status (monophyletic, paraphyletic, polyphyletic) of all groupings defined by the user (genus, family, higher level taxonomy, etc.), and if the tree has support values it can obtain the support levels for each grouping.
 
-**MonoPhylo** was written as a companion to the program **SuperCRUNCH**, and is described in the following pre-print article:
-
-+ Portik, D.M., and J.J. Wiens. (2019) SuperCRUNCH: A toolkit for creating and manipulating supermatrices and other large phylogenetic datasets. BioRxiv, https://doi.org/10.1101/538728.
-
+**MonoPhylo** was written as a companion to the program [SuperCRUNCH](https://github.com/dportik/SuperCRUNCH).
 
 ## Version
 
@@ -27,9 +24,28 @@ The current release of **MonoPhylo** is v1.0.
 
 + [ETE3](http://etetoolkit.org/): Installation instructions [here](http://etetoolkit.org/download/).
 
-## Instructions for Analyses
+## Citation
+
+**MonoPhylo** is currently described in a pre-print available on BioRxiv:
+
++ Portik, D.M., and J.J. Wiens. (2019) SuperCRUNCH: A toolkit for creating and manipulating supermatrices and other large phylogenetic datasets. BioRxiv, https://doi.org/10.1101/538728.
+
+If you use **MonoPhylo** for your research, please cite the above BioRxiv publication (for now).
+
+## License
+
+GNU Lesser General Public License v3.0
+
+## Contact
+
+MonoPhylo is written and maintained by Daniel Portik (daniel.portik@gmail.com)
+
+## Instructions for Analyses and Tutorials
 
 The goal of running **MonoPhylo** is to determine which groupings are monophyletic in a given phylogenetic tree. In order to achieve this, it is necessary to first obtain a list of the tips in the tree and subsequently define the groups. It is also important to ensure the phylogenetic tree is properly rooted for the analysis, otherwise the groupings may not be correctly assessed. Finally, using a file that defines the major groupings, the groups can be assessed for the given phylogenetic tree. Instructions for completing each of these major tasks can be found below. 
+
+In addition to the instructions posted here, two complete example analyses can be found in the [Example-data folder](https://github.com/dportik/MonoPhylo/tree/master/Example-data). The complete set of input files and output files generated for each step, along with instructions, can be found for each analysis folder present.
+
 
 ### 1. Obtaining a list of tree tips
 
@@ -239,24 +255,5 @@ The above command will root the tree file `RAxML_bestTree.Iguania.tre` using the
 
 
 
-Two complete tutorials are provided in the [Example-data folder](https://github.com/dportik/MonoPhylo/tree/master/Example-data).
 
-
-
-
-## Citation
-
-**MonoPhylo** is currently described in a pre-print available on BioRxiv:
-
-+ Portik, D.M., and J.J. Wiens. (2019) SuperCRUNCH: A toolkit for creating and manipulating supermatrices and other large phylogenetic datasets. BioRxiv, https://doi.org/10.1101/538728.
-
-If you use **MonoPhylo** for your research, please cite the above BioRxiv publication (for now).
-
-## License
-
-GNU Lesser General Public License v3.0
-
-## Contact
-
-MonoPhylo is written and maintained by Daniel Portik (daniel.portik@gmail.com)
 
