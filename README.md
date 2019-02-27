@@ -4,7 +4,7 @@
 
 ## Overview
 
-**MonoPhylo** is a python script that can be used to assess the status of various user-defined relationships in phylogenetic trees. **MonoPhylo** can be used to accomplish the following tasks:
+**MonoPhylo** is a python script that can be used to assess the status of various user-defined relationships in phylogenetic trees. The tree files must be in newick format, which is the standard output for many tree-building programs such as RAxML. **MonoPhylo** can be used to accomplish the following tasks:
 
 + Output a complete list of all the tips in the tree. If the tips follow the naming scheme of `Genus_species` or `Genus_species_subspecies`, it can also output a complete list of genera. This file can be used to construct the groupings to test.
 
@@ -42,7 +42,7 @@ MonoPhylo is written and maintained by Daniel Portik (daniel.portik@gmail.com)
 
 ## Instructions for Analyses and Tutorials
 
-The goal of running **MonoPhylo** is to determine which groupings are monophyletic in a given phylogenetic tree. In order to achieve this, it is necessary to first obtain a list of the tips in the tree and subsequently define the groups. It is also important to ensure the phylogenetic tree is properly rooted for the analysis, otherwise the groupings may not be correctly assessed. Finally, using a file that defines the major groupings, the groups can be assessed for the given phylogenetic tree. Instructions for completing each of these major tasks can be found below. 
+The goal of running **MonoPhylo** is to determine which groupings are monophyletic in a given phylogenetic tree. In order to achieve this, it is necessary to first obtain a list of the tips in the tree and subsequently define the groups. It is also important to ensure the phylogenetic tree is properly rooted for the analysis, otherwise the groupings may not be correctly assessed. Finally, using a file that defines the major groupings (a map file), the groups can be assessed for the given phylogenetic tree. Instructions for completing each of these major tasks can be found below. 
 
 In addition to the instructions posted here, two complete example analyses can be found in the [Example-data](https://github.com/dportik/MonoPhylo/tree/master/Example-data) folder. The complete set of input files and output files generated for each step, along with instructions, can be found for each analysis folder present.
 
