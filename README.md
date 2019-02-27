@@ -179,7 +179,7 @@ Anolis_aeneus	Anolis	Dactyloidae	NA	Pleurodonta
 ...
 ```
 
-In this example map file I labeled the columns according to a particular taxonomic level, and the groupings matched those levels. Note that there was no *SubFamily* value assigned to the genus `Anolis`, and the `NA` value was used instead. The `NA` value will exclude a tip from being assigned to any grouping for that category. This is useful for outgroups, which can be assigned `NA` across all columns and be excluded from analysis. In this sense, a group category (column) does not require information for each of the tips. 
+In this example map file I labeled the columns according to a particular taxonomic level, and the groupings matched those levels. Note that there was no *SubFamily* value assigned to the genus `Anolis`, and the `NA` value was used instead. The `NA` value will exclude a tip from being assigned to any grouping for that category. This is useful for outgroups, which can be assigned `NA` across all columns and be excluded from analysis. In this sense, a group category (column) does not require that each of the tips be assigned to a specific group, they can always be ignored for the category by assigning `NA` instead.
 
 The map file can contain more taxa than are actually present in the tree. Only taxon names that match those found in the tree will be included in the analysis. However, it is extremely important that all taxa present in the tree that belong to a particular group are included in the map file, otherwise the group can never be found as monophyletic (because some members are missing). This is why it makes the most sense to construct the map file from the tip labels output file created by **MonoPhylo**.
 
