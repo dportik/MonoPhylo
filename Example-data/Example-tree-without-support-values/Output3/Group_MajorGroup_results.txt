@@ -1,0 +1,3 @@
+Grouping	Number_Contained_Taxa	Monophyletic	Category	Number_Interfering_Species	Interfering_Species
+Acrodonta	513	True	Monophyletic	0	
+Pleurodonta	913	True	Monophyletic	0	

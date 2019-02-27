@@ -1,0 +1,138 @@
+Grouping	Number_Contained_Taxa	Monophyletic	Category	Number_Interfering_Species	Interfering_Species
+Agamidae	325	True	Monophyletic	0	
+Chamaeleonidae	188	True	Monophyletic	0	
+Corytophanidae	8	True	Monophyletic	0	
+Crotaphytidae	12	True	Monophyletic	0	
+Dactyloidae	324	True	Monophyletic	0	
+Hoplocercidae	16	True	Monophyletic	0	
+Iguanidae	37	True	Monophyletic	0	
+Leiocephalidae	15	True	Monophyletic	0	
+Leiosauridae	27	True	Monophyletic	0	
+Liolaemidae	226	True	Monophyletic	0	
+Opluridae	7	True	Monophyletic	0	
+Phrynosomatidae	134	True	Monophyletic	0	
+Polychrotidae	8	True	Monophyletic	0	
+Tropiduridae	99	True	Monophyletic	0	
+Acanthocercus	5	False	Polyphyletic	10	Agama_robecchii, Pseudotrapelus_aqabensis, Pseudotrapelus_chlodnickii, Pseudotrapelus_dhofarensis, Pseudotrapelus_jensvindumi, Pseudotrapelus_neumanni, Pseudotrapelus_sinaitus, Xenagama_batillifera, Xenagama_taylori, Xenagama_wilmsi
+Acanthosaura	4	True	Monophyletic	0	
+Agama	38	False	Polyphyletic	14	Acanthocercus_adramitanus, Acanthocercus_annectens, Acanthocercus_atricollis, Acanthocercus_cyanogaster, Acanthocercus_yemensis, Pseudotrapelus_aqabensis, Pseudotrapelus_chlodnickii, Pseudotrapelus_dhofarensis, Pseudotrapelus_jensvindumi, Pseudotrapelus_neumanni, Pseudotrapelus_sinaitus, Xenagama_batillifera, Xenagama_taylori, Xenagama_wilmsi
+Amblyrhynchus	1	NA	NA	0	
+Amphibolurus	2	True	Monophyletic	0	
+Anisolepis	2	True	Monophyletic	0	
+Anolis	324	True	Monophyletic	0	
+Aphaniotis	1	NA	NA	0	
+Archaius	1	NA	NA	0	
+Basiliscus	4	True	Monophyletic	0	
+Brachylophus	3	True	Monophyletic	0	
+Bradypodion	17	True	Monophyletic	0	
+Bronchocela	5	True	Monophyletic	0	
+Brookesia	28	True	Monophyletic	0	
+Bufoniceps	1	NA	NA	0	
+Cachryx	2	True	Monophyletic	0	
+Callisaurus	1	NA	NA	0	
+Calotes	15	True	Monophyletic	0	
+Calumma	31	True	Monophyletic	0	
+Ceratophora	5	True	Monophyletic	0	
+Chalarodon	1	NA	NA	0	
+Chamaeleo	14	True	Monophyletic	0	
+Chelosania	1	NA	NA	0	
+Chlamydosaurus	1	NA	NA	0	
+Conolophus	3	True	Monophyletic	0	
+Cophosaurus	1	NA	NA	0	
+Cophotis	2	True	Monophyletic	0	
+Coryphophylax	1	NA	NA	0	
+Corytophanes	3	True	Monophyletic	0	
+Crotaphytus	9	True	Monophyletic	0	
+Ctenoblepharys	1	NA	NA	0	
+Ctenophorus	24	False	Polyphyletic	1	Hypsilurus_godeffroyi
+Ctenosaura	13	True	Monophyletic	0	
+Cyclura	8	True	Monophyletic	0	
+Diplolaemus	4	True	Monophyletic	0	
+Diporiphora	16	True	Monophyletic	0	
+Dipsosaurus	1	NA	NA	0	
+Draco	34	True	Monophyletic	0	
+Enyalioides	14	False	Polyphyletic	1	Morunasaurus_annularis
+Enyalius	9	False	Paraphyletic	4	Anisolepis_grilli, Anisolepis_longicauda, Urostrophus_gallardoi, Urostrophus_vautieri
+Eurolophosaurus	3	True	Monophyletic	0	
+Furcifer	21	True	Monophyletic	0	
+Gambelia	3	True	Monophyletic	0	
+Gonocephalus	9	True	Monophyletic	0	
+Gowidon	2	True	Monophyletic	0	
+Holbrookia	5	True	Monophyletic	0	
+Hoplocercus	1	NA	NA	0	
+Hydrosaurus	3	True	Monophyletic	0	
+Hypsilurus	5	False	Polyphyletic	70	Amphibolurus_muricatus, Amphibolurus_norrisi, Chelosania_brunnea, Chlamydosaurus_kingii, Ctenophorus_adelaidensis, Ctenophorus_caudicinctus, Ctenophorus_clayi, Ctenophorus_cristatus, Ctenophorus_decresii, Ctenophorus_femoralis, Ctenophorus_fionni, Ctenophorus_fordi, Ctenophorus_gibba, Ctenophorus_isolepis, Ctenophorus_maculatus, Ctenophorus_maculosus, Ctenophorus_mckenziei, Ctenophorus_nuchalis, Ctenophorus_ornatus, Ctenophorus_parviceps, Ctenophorus_pictus, Ctenophorus_reticulatus, Ctenophorus_rubens, Ctenophorus_rufescens, Ctenophorus_salinarum, Ctenophorus_scutulatus, Ctenophorus_tjantjalka, Ctenophorus_vadnappa, Diporiphora_albilabris, Diporiphora_amphiboluroides, Diporiphora_arnhemica, Diporiphora_australis, Diporiphora_bennettii, Diporiphora_bilineata, Diporiphora_lalliae, Diporiphora_linga, Diporiphora_magna, Diporiphora_nobbi, Diporiphora_phaeospinosa, Diporiphora_pindan, Diporiphora_reginae, Diporiphora_superba, Diporiphora_valens, Diporiphora_winneckei, Gowidon_longirostris, Gowidon_temporalis, Intellagama_lesueurii, Lophognathus_burnsi, Lophognathus_gilberti, Lophosaurus_boydii, Lophosaurus_dilophus, Lophosaurus_spinipes, Moloch_horridus, Pogona_barbata, Pogona_henrylawsoni, Pogona_minima, Pogona_minor, Pogona_mitchelli, Pogona_nullarbor, Pogona_vitticeps, Rankinia_diemensis, Tympanocryptis_cephalus, Tympanocryptis_houstoni, Tympanocryptis_intima, Tympanocryptis_lineata, Tympanocryptis_pentalineata, Tympanocryptis_pinguicolla, Tympanocryptis_tetraporophora, Tympanocryptis_uniformis, Tympanocryptis_wilsoni
+Iguana	2	True	Monophyletic	0	
+Intellagama	1	NA	NA	0	
+Japalura	11	False	Polyphyletic	111	Acanthosaura_armata, Acanthosaura_capra, Acanthosaura_crucigera, Acanthosaura_lepidogaster, Aphaniotis_fusca, Bronchocela_burmana, Bronchocela_cristatella, Bronchocela_jubata, Bronchocela_rayaensis, Bronchocela_shenlong, Calotes_calotes, Calotes_ceylonensis, Calotes_chincollium, Calotes_emma, Calotes_grandisquamis, Calotes_htunwini, Calotes_irawadi, Calotes_jerdoni, Calotes_liocephalus, Calotes_liolepis, Calotes_minor, Calotes_mystaceus, Calotes_nemoricola, Calotes_nigrilabris, Calotes_versicolor, Ceratophora_aspera, Ceratophora_erdeleni, Ceratophora_karu, Ceratophora_stoddartii, Ceratophora_tennentii, Cophotis_ceylanica, Cophotis_dumbara, Coryphophylax_subcristatus, Draco_beccarii, Draco_biaro, Draco_bimaculatus, Draco_blanfordii, Draco_boschmai, Draco_bourouniensis, Draco_caerulhians, Draco_cornutus, Draco_cristatellus, Draco_cyanopterus, Draco_dussumieri, Draco_fimbriatus, Draco_formosus, Draco_guentheri, Draco_haematopogon, Draco_indochinensis, Draco_lineatus, Draco_maculatus, Draco_maximus, Draco_melanopogon, Draco_mindanensis, Draco_obscurus, Draco_ornatus, Draco_palawanensis, Draco_quadrasi, Draco_quinquefasciatus, Draco_reticulatus, Draco_rhytisma, Draco_spilonotus, Draco_spilopterus, Draco_sumatranus, Draco_taeniopterus, Draco_timoriensis, Draco_volans, Gonocephalus_abbotti, Gonocephalus_bellii, Gonocephalus_bornensis, Gonocephalus_chamaeleontinus, Gonocephalus_grandis, Gonocephalus_interruptus, Gonocephalus_kuhlii, Gonocephalus_semperi, Gonocephalus_sophiae, Lophocalotes_achlios, Lophocalotes_ludekingi, Lyriocephalus_scutatus, Malayodracon_robinsonii, Otocryptis_beddomei, Otocryptis_wiegmanni, Phoxophrys_nigrilabris, Psammophilus_dorsalis, Pseudocalotes_baliomus, Pseudocalotes_brevipes, Pseudocalotes_cybelidermus, Pseudocalotes_drogon, Pseudocalotes_flavigula, Pseudocalotes_floweri, Pseudocalotes_guttalineatus, Pseudocalotes_kakhienensis, Pseudocalotes_kingdonwardi, Pseudocalotes_larutensis, Pseudocalotes_microlepis, Pseudocalotes_rhaegal, Pseudocalotes_rhammanotus, Pseudocalotes_tympanistriga, Pseudocalotes_viserion, Ptyctolaemus_collicristatus, Ptyctolaemus_gularis, Salea_anamallayana, Salea_horsfieldii, Sarada_darwini, Sarada_deccanensis, Sarada_superba, Sitana_laticeps, Sitana_marudhamneydhal, Sitana_ponticeriana, Sitana_spinaecephalus, Sitana_visiri
+Kinyongia	21	False	Polyphyletic	122	Archaius_tigris, Bradypodion_atromontanum, Bradypodion_caeruleogula, Bradypodion_caffer, Bradypodion_damaranum, Bradypodion_dracomontanum, Bradypodion_gutturale, Bradypodion_kentanicum, Bradypodion_melanocephalum, Bradypodion_nemorale, Bradypodion_ngomeense, Bradypodion_occidentale, Bradypodion_pumilum, Bradypodion_setaroi, Bradypodion_taeniabronchum, Bradypodion_thamnobates, Bradypodion_transvaalense, Bradypodion_ventrale, Calumma_amber, Calumma_ambreense, Calumma_andringitraense, Calumma_boettgeri, Calumma_brevicorne, Calumma_capuroni, Calumma_crypticum, Calumma_cucullatum, Calumma_fallax, Calumma_furcifer, Calumma_gallus, Calumma_gastrotaenia, Calumma_gehringi, Calumma_glawi, Calumma_globifer, Calumma_guibei, Calumma_guillaumeti, Calumma_hafahafa, Calumma_hilleniusi, Calumma_linotum, Calumma_malthe, Calumma_marojezense, Calumma_nasutum, Calumma_oshaughnessyi, Calumma_parsonii, Calumma_peltierorum, Calumma_peyrierasi, Calumma_tarzan, Calumma_tsaratananense, Calumma_vencesi, Calumma_vohibola, Chamaeleo_africanus, Chamaeleo_anchietae, Chamaeleo_arabicus, Chamaeleo_calcaricarens, Chamaeleo_calyptratus, Chamaeleo_chamaeleon, Chamaeleo_dilepis, Chamaeleo_gracilis, Chamaeleo_laevigatus, Chamaeleo_monachus, Chamaeleo_namaquensis, Chamaeleo_necasi, Chamaeleo_senegalensis, Chamaeleo_zeylanicus, Furcifer_angeli, Furcifer_antimena, Furcifer_balteatus, Furcifer_belalandaensis, Furcifer_bifidus, Furcifer_campani, Furcifer_cephalolepis, Furcifer_labordi, Furcifer_lateralis, Furcifer_major, Furcifer_minor, Furcifer_nicosiai, Furcifer_oustaleti, Furcifer_pardalis, Furcifer_petteri, Furcifer_polleni, Furcifer_rhinoceratus, Furcifer_timoni, Furcifer_verrucosus, Furcifer_viridis, Furcifer_willsii, Nadzikambia_baylissi, Nadzikambia_mlanjensis, Rieppeleon_brachyurus, Rieppeleon_brevicaudatus, Rieppeleon_kerstenii, Trioceros_affinis, Trioceros_balebicornutus, Trioceros_bitaeniatus, Trioceros_camerunensis, Trioceros_conirostratus, Trioceros_cristatus, Trioceros_deremensis, Trioceros_ellioti, Trioceros_feae, Trioceros_fuelleborni, Trioceros_goetzei, Trioceros_hanangensis, Trioceros_harennae, Trioceros_hoehnelii, Trioceros_incornutus, Trioceros_ituriensis, Trioceros_jacksonii, Trioceros_johnstoni, Trioceros_laterispinis, Trioceros_melleri, Trioceros_montium, Trioceros_narraioca, Trioceros_oweni, Trioceros_perreti, Trioceros_pfefferi, Trioceros_quadricornis, Trioceros_rudis, Trioceros_schubotzi, Trioceros_serratus, Trioceros_sternfeldi, Trioceros_tempeli, Trioceros_werneri, Trioceros_wiedersheimi
+Laemanctus	1	NA	NA	0	
+Laudakia	6	True	Monophyletic	0	
+Leiocephalus	15	True	Monophyletic	0	
+Leiolepis	5	True	Monophyletic	0	
+Leiosaurus	4	True	Monophyletic	0	
+Liolaemus	181	True	Monophyletic	0	
+Lophocalotes	2	True	Monophyletic	0	
+Lophognathus	2	True	Monophyletic	0	
+Lophosaurus	3	True	Monophyletic	0	
+Lyriocephalus	1	NA	NA	0	
+Malayodracon	1	NA	NA	0	
+Mantheyus	1	NA	NA	0	
+Microlophus	21	True	Monophyletic	0	
+Moloch	1	NA	NA	0	
+Morunasaurus	1	NA	NA	0	
+Nadzikambia	2	True	Monophyletic	0	
+Oplurus	6	False	Polyphyletic	1	Chalarodon_madagascariensis
+Otocryptis	2	False	Paraphyletic	8	Sarada_darwini, Sarada_deccanensis, Sarada_superba, Sitana_laticeps, Sitana_marudhamneydhal, Sitana_ponticeriana, Sitana_spinaecephalus, Sitana_visiri
+Palleon	2	True	Monophyletic	0	
+Paralaudakia	6	True	Monophyletic	0	
+Petrosaurus	3	True	Monophyletic	0	
+Phoxophrys	1	NA	NA	0	
+Phrynocephalus	27	True	Monophyletic	0	
+Phrynosoma	18	True	Monophyletic	0	
+Phymaturus	44	True	Monophyletic	0	
+Physignathus	1	NA	NA	0	
+Plica	3	True	Monophyletic	0	
+Pogona	7	True	Monophyletic	0	
+Polychrus	8	True	Monophyletic	0	
+Pristidactylus	6	False	Paraphyletic	4	Diplolaemus_bibronii, Diplolaemus_darwinii, Diplolaemus_leopardinus, Diplolaemus_sexcinctus
+Psammophilus	1	NA	NA	0	
+Pseudocalotes	15	False	Polyphyletic	69	Acanthosaura_armata, Acanthosaura_capra, Acanthosaura_crucigera, Acanthosaura_lepidogaster, Aphaniotis_fusca, Bronchocela_burmana, Bronchocela_cristatella, Bronchocela_jubata, Bronchocela_rayaensis, Bronchocela_shenlong, Calotes_calotes, Calotes_ceylonensis, Calotes_chincollium, Calotes_emma, Calotes_grandisquamis, Calotes_htunwini, Calotes_irawadi, Calotes_jerdoni, Calotes_liocephalus, Calotes_liolepis, Calotes_minor, Calotes_mystaceus, Calotes_nemoricola, Calotes_nigrilabris, Calotes_versicolor, Ceratophora_aspera, Ceratophora_erdeleni, Ceratophora_karu, Ceratophora_stoddartii, Ceratophora_tennentii, Cophotis_ceylanica, Cophotis_dumbara, Coryphophylax_subcristatus, Gonocephalus_abbotti, Gonocephalus_bellii, Gonocephalus_bornensis, Gonocephalus_chamaeleontinus, Gonocephalus_grandis, Gonocephalus_interruptus, Gonocephalus_kuhlii, Gonocephalus_semperi, Gonocephalus_sophiae, Japalura_brevipes, Japalura_chapaensis, Japalura_flaviceps, Japalura_luei, Japalura_makii, Japalura_polygonata, Japalura_splendida, Japalura_swinhonis, Japalura_yunnanensis, Lophocalotes_achlios, Lophocalotes_ludekingi, Lyriocephalus_scutatus, Malayodracon_robinsonii, Otocryptis_beddomei, Otocryptis_wiegmanni, Phoxophrys_nigrilabris, Psammophilus_dorsalis, Salea_anamallayana, Salea_horsfieldii, Sarada_darwini, Sarada_deccanensis, Sarada_superba, Sitana_laticeps, Sitana_marudhamneydhal, Sitana_ponticeriana, Sitana_spinaecephalus, Sitana_visiri
+Pseudotrapelus	6	True	Monophyletic	0	
+Ptyctolaemus	2	True	Monophyletic	0	
+Rankinia	1	NA	NA	0	
+Rhampholeon	15	True	Monophyletic	0	
+Rieppeleon	3	True	Monophyletic	0	
+Saara	3	True	Monophyletic	0	
+Salea	2	False	Polyphyletic	82	Acanthosaura_armata, Acanthosaura_capra, Acanthosaura_crucigera, Acanthosaura_lepidogaster, Aphaniotis_fusca, Bronchocela_burmana, Bronchocela_cristatella, Bronchocela_jubata, Bronchocela_rayaensis, Bronchocela_shenlong, Calotes_calotes, Calotes_ceylonensis, Calotes_chincollium, Calotes_emma, Calotes_grandisquamis, Calotes_htunwini, Calotes_irawadi, Calotes_jerdoni, Calotes_liocephalus, Calotes_liolepis, Calotes_minor, Calotes_mystaceus, Calotes_nemoricola, Calotes_nigrilabris, Calotes_versicolor, Ceratophora_aspera, Ceratophora_erdeleni, Ceratophora_karu, Ceratophora_stoddartii, Ceratophora_tennentii, Cophotis_ceylanica, Cophotis_dumbara, Coryphophylax_subcristatus, Gonocephalus_abbotti, Gonocephalus_bellii, Gonocephalus_bornensis, Gonocephalus_chamaeleontinus, Gonocephalus_grandis, Gonocephalus_interruptus, Gonocephalus_kuhlii, Gonocephalus_semperi, Gonocephalus_sophiae, Japalura_brevipes, Japalura_chapaensis, Japalura_flaviceps, Japalura_luei, Japalura_makii, Japalura_polygonata, Japalura_splendida, Japalura_swinhonis, Japalura_yunnanensis, Lophocalotes_achlios, Lophocalotes_ludekingi, Lyriocephalus_scutatus, Malayodracon_robinsonii, Otocryptis_beddomei, Otocryptis_wiegmanni, Phoxophrys_nigrilabris, Psammophilus_dorsalis, Pseudocalotes_baliomus, Pseudocalotes_brevipes, Pseudocalotes_cybelidermus, Pseudocalotes_drogon, Pseudocalotes_flavigula, Pseudocalotes_floweri, Pseudocalotes_guttalineatus, Pseudocalotes_kakhienensis, Pseudocalotes_kingdonwardi, Pseudocalotes_larutensis, Pseudocalotes_microlepis, Pseudocalotes_rhaegal, Pseudocalotes_rhammanotus, Pseudocalotes_tympanistriga, Pseudocalotes_viserion, Sarada_darwini, Sarada_deccanensis, Sarada_superba, Sitana_laticeps, Sitana_marudhamneydhal, Sitana_ponticeriana, Sitana_spinaecephalus, Sitana_visiri
+Sarada	3	True	Monophyletic	0	
+Sauromalus	4	True	Monophyletic	0	
+Sceloporus	89	True	Monophyletic	0	
+Sitana	5	True	Monophyletic	0	
+Stellagama	1	NA	NA	0	
+Stenocercus	40	True	Monophyletic	0	
+Strobilurus	1	NA	NA	0	
+Trapelus	8	True	Monophyletic	0	
+Trioceros	33	True	Monophyletic	0	
+Tropidurus	28	False	Polyphyletic	8	Eurolophosaurus_amathites, Eurolophosaurus_divaricatus, Eurolophosaurus_nanuzae, Plica_lumaria, Plica_plica, Plica_umbra, Uracentron_azureum, Uracentron_flaviceps
+Tympanocryptis	9	True	Monophyletic	0	
+Uma	6	True	Monophyletic	0	
+Uracentron	2	False	Polyphyletic	34	Eurolophosaurus_amathites, Eurolophosaurus_divaricatus, Eurolophosaurus_nanuzae, Plica_lumaria, Plica_plica, Plica_umbra, Tropidurus_azurduyae, Tropidurus_bogerti, Tropidurus_callathelys, Tropidurus_catalanensis, Tropidurus_chromatops, Tropidurus_cocorobensis, Tropidurus_erythrocephalus, Tropidurus_etheridgei, Tropidurus_guarani, Tropidurus_helenae, Tropidurus_hispidus, Tropidurus_hygomi, Tropidurus_imbituba, Tropidurus_insulanus, Tropidurus_itambere, Tropidurus_jaguaribanus, Tropidurus_lagunablanca, Tropidurus_montanus, Tropidurus_mucujensis, Tropidurus_oreadicus, Tropidurus_pinima, Tropidurus_psammonastes, Tropidurus_semitaeniatus, Tropidurus_sertanejo, Tropidurus_spinulosus, Tropidurus_tarara, Tropidurus_teyumirim, Tropidurus_torquatus
+Uranoscodon	1	NA	NA	0	
+Uromastyx	14	True	Monophyletic	0	
+Urosaurus	8	True	Monophyletic	0	
+Urostrophus	2	False	Paraphyletic	2	Anisolepis_grilli, Anisolepis_longicauda
+Uta	3	True	Monophyletic	0	
+Xenagama	3	True	Monophyletic	0	
+Acrodonta	513	True	Monophyletic	0	
+Pleurodonta	913	True	Monophyletic	0	
+Agaminae	101	True	Monophyletic	0	
+Amphibolurinae	76	True	Monophyletic	0	
+Draconinae	123	True	Monophyletic	0	
+Enyaliinae	13	True	Monophyletic	0	
+Hydrosaurinae	3	True	Monophyletic	0	
+Leiolepidinae	5	True	Monophyletic	0	
+Leiosaurinae	14	True	Monophyletic	0	
+Phrynosomatinae	31	True	Monophyletic	0	
+Sceloporinae	103	True	Monophyletic	0	
+Uromastycinae	17	True	Monophyletic	0	

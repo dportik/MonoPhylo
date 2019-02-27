@@ -1,0 +1,11 @@
+Grouping	Number_Contained_Taxa	Monophyletic	Category	Number_Interfering_Species	Interfering_Species
+Agaminae	101	True	Monophyletic	0	
+Amphibolurinae	76	True	Monophyletic	0	
+Draconinae	123	True	Monophyletic	0	
+Enyaliinae	13	True	Monophyletic	0	
+Hydrosaurinae	3	True	Monophyletic	0	
+Leiolepidinae	5	True	Monophyletic	0	
+Leiosaurinae	14	True	Monophyletic	0	
+Phrynosomatinae	31	True	Monophyletic	0	
+Sceloporinae	103	True	Monophyletic	0	
+Uromastycinae	17	True	Monophyletic	0	
