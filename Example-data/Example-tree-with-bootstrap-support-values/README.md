@@ -212,6 +212,9 @@ Category: MajorGroup
 	Subgroup Acrodonta contains 513 taxa.
 	Subgroup Pleurodonta contains 913 taxa.
 
+
+
+
 Examining Genus:
 	Acanthocercus is Polyphyletic
 	Acanthosaura is Monophyletic
@@ -327,6 +330,7 @@ Examining Genus:
 Found 68 monophyletic groups out of 84 testable groupings.
 Of 111 total groupings, 27 contained a single taxon and were ignored.
 
+
 Examining Family:
 	Agamidae is Monophyletic
 	Chamaeleonidae is Monophyletic
@@ -345,6 +349,7 @@ Examining Family:
 Found 14 monophyletic groups out of 14 testable groupings.
 Of 14 total groupings, 0 contained a single taxon and were ignored.
 
+
 Examining SubFamily:
 	Agaminae is Monophyletic
 	Amphibolurinae is Monophyletic
@@ -359,10 +364,24 @@ Examining SubFamily:
 Found 10 monophyletic groups out of 10 testable groupings.
 Of 10 total groupings, 0 contained a single taxon and were ignored.
 
+
 Examining MajorGroup:
 	Acrodonta is Monophyletic
 	Pleurodonta is Monophyletic
 Found 2 monophyletic groups out of 2 testable groupings.
 Of 2 total groupings, 0 contained a single taxon and were ignored.
-
 ```
+
+The first half of the output on screen shows the groupings found and how many taxa are included in each. The second half is the assessment for each 'category' of groupings (represented by a column), and a quick summary of the results. Note that any group that contains only one taxon is automatically excluded because it isn't possible to assess monophyly. 
+
+This produced the following output files in `Output3`:
+
++ `All_Groups_results.txt`
++ `Group_Family_results.txt`
++ `Group_Genus_results.txt`
++ `Group_MajorGroup_results.txt`
++ `Group_SubFamily_results.txt`
++ `Summary.log`
+
+
+
