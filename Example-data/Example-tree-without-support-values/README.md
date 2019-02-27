@@ -1,4 +1,4 @@
-## Example Analysis: Tree with bootstrap support values
+## Example Analysis: Tree without support values
 
 ---------------
 
