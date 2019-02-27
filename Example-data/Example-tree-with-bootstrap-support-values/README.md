@@ -2,11 +2,11 @@
 
 ---------------
 
-This directory contains all the input files, output files, and instructions to replicate this **MonoPhylo** analysis of a tree with bootstrap support values.
+This directory contains all the input files, output files, and instructions to replicate this **MonoPhylo** analysis of a tree containing bootstrap support values.
 
-The input tree (`RAxML_bipartitions.Iguania_SuperCRUNCH_NCBI_Concatenated_Alignment.tre`) was generated from a supermatrix created for Iguania using **SuperCRUNCH**. Specifically, I used RAxML to perform 100 bootstrap replicates and used them to score the best ML tree. 
+The input tree (`RAxML_bipartitions.Iguania_SuperCRUNCH_NCBI_Concatenated_Alignment.tre`) was generated from a supermatrix created for Iguania using **SuperCRUNCH**. Specifically, I used RAxML to perform 100 bootstrap replicates and score the best ML tree (`-f a -m GTRCAT -p 12345 -x 12345 -# 100`).
 
-Below are the major steps of this **MonoPhylo** analysis and the commands used for each step.
+Below are the major steps of this **MonoPhylo** analysis and the commands used for each step. Although the file names are accurate, please note that the paths to the files will change depending on where they are stored locally. If you replicate this analysis, make sure to edit the paths for the relevant files!
 
 ## 1. Obtaining a list of tree tips
 
@@ -383,5 +383,5 @@ This produced the following output files in `Output3`:
 + `Group_SubFamily_results.txt`
 + `Summary.log`
 
-
+The `All_Groups_results.txt` will contain the results for each group, regardless of category, whereas the other results files only contain information for groups in that particular category. The `Summary.log` contains the information that was printed to the screen while running this step. 
 
