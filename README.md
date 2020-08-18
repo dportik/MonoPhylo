@@ -12,25 +12,25 @@
 
 + Check the status (monophyletic, paraphyletic, polyphyletic) of all groupings defined by the user (genus, family, higher level taxonomy, etc.), and if the tree has support values it can obtain the support levels for each grouping.
 
-**MonoPhylo** was written as a companion to the program [SuperCRUNCH](https://github.com/dportik/SuperCRUNCH).
-
 ## Version
 
-The current release of **MonoPhylo** is v1.0.
+The current release of **MonoPhylo** is [v1.1](https://github.com/dportik/MonoPhylo/releases/tag/v1.1).
 
 ## Installation
 
-**MonoPhylo** is a module written in Python (2.7) that functions as a stand-alone command-line script (`MonoPhylo.py`). It can be downloaded and executed independently without the need to install **MonoPhylo** as a Python package or library, making it easy to use and edit. There is one Python package that must be installed prior to use of **MonoPhylo**:
+**MonoPhylo** is written in Python (compatible with 2.7 and 3.7) and functions as a command-line script (`MonoPhylo.py`). It can be downloaded and executed independently without the need to install **MonoPhylo** as a Python package or library, making it easy to use and edit. There is one Python package that must be installed prior to use of **MonoPhylo**:
 
 + [ETE3](http://etetoolkit.org/): Installation instructions [here](http://etetoolkit.org/download/).
 
 ## Citation
 
-**MonoPhylo** is currently described in a pre-print available on BioRxiv:
+**MonoPhylo** was published in:
 
-+ Portik, D.M., and J.J. Wiens. (2019) SuperCRUNCH: A toolkit for creating and manipulating supermatrices and other large phylogenetic datasets. BioRxiv, https://doi.org/10.1101/538728.
++ Portik, D.M., and J.J. Wiens. (2020) Do alignment methods matter for phylogenomic (UCE) analyses? Systematic Biology, Advance Access. 
 
-If you use **MonoPhylo** for your research, please cite the above BioRxiv publication (for now).
+You can download this paper for free using the link [here](https://academic.oup.com/sysbio/advance-article/doi/10.1093/sysbio/syaa064/5892776?guestAccessKey=e29d2b95-8280-4c0e-bdeb-f4ee65a056fc).
+
+If you use **MonoPhylo** for your research, please cite the above publication.
 
 ## License
 
@@ -38,7 +38,7 @@ GNU Lesser General Public License v3.0
 
 ## Contact
 
-MonoPhylo is written and maintained by Daniel Portik (daniel.portik@gmail.com)
+MonoPhylo is written and maintained by Daniel Portik (daniel.portik@gmail.com).
 
 ## Instructions for Analyses and Tutorials
 
