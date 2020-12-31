@@ -7,10 +7,10 @@ from ete3 import Tree
 def get_args():
     """Get arguments from CLI"""
     parser = argparse.ArgumentParser(
-            description="""------------------------------------------------------------------------------
+            description="""
     MonoPhylo: A tool for examining phylogenetic relationships in newick tree files. For
     usage instructions, please see documentation available at: https://github.com/dportik/MonoPhylo.
-	------------------------------------------------------------------------------""")
+	""")
     parser.add_argument("-t", "--tree",
                             required=True,
                             help="REQUIRED: The full path to a newick tree file.")
@@ -203,7 +203,7 @@ def parse_mapfile(map, taxa):
     for i in range(1,cols):
         label = contents[0][i]
         groups = sorted(set([c[i] for c in contents[1:] if c[i] != "NA"]))
-        print "Category: {}".format(label)
+        print("Category: {}".format(label))
         gdict = groups_to_dicts(contents, groups, i, taxa)
         task_list.append([label, gdict])
     return task_list
