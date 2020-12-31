@@ -235,15 +235,23 @@ def test_monophyly(label, dicts, tree):
                     truth = results[0]
                     mono = results[1].capitalize()
                     print("\t{0} is {1}".format(g, mono))
-                    fh_log.write("\t{0} is {1}\n".format(g, mono))
+                    fh_log.write("\n\t{0}:\n\t\tStatus: {1}\n\t\tContents: {2} taxa\n".format(g, mono, len(dicts[g])))
+                    for taxon in dicts[g]:
+                        fh_log.write("\t\t\t{}\n".format(taxon))
                 else:
                     truth = "NA"
                     mono = "NA"
                     print("\t{0} contains only 1 taxon".format(g))
-                    fh_log.write("\t{0} contains only 1 taxon\n".format(g))
-                
-                fh_out.write("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\n".format(g, len(dicts[g]), truth, mono,
-                                                                         len(names), ", ".join(names)))
+                    fh_log.write("\n\t{0}:\n\t\tStatus: NA\n\t\tContents: {1} taxon\n".format(g, len(dicts[g])))
+                    for taxon in dicts[g]:
+                        fh_log.write("\t\t\t{}\n".format(taxon))
+
+                if len(names) >= 500:
+                    fh_out.write("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\n".format(g, len(dicts[g]), truth,
+                                                                             mono, len(names), "Exceeded 500 names max"))
+                else:
+                    fh_out.write("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\n".format(g, len(dicts[g]), truth,
+                                                                             mono, len(names), ", ".join(names)))
 
                 if mono == "Monophyletic":
                     mono_count += 1
@@ -287,12 +295,16 @@ def test_monophyly_support(label, dicts, tree):
                     truth = results[0]
                     mono = results[1].capitalize()
                     print("\t{0} is {1}".format(g, mono))
-                    fh_log.write("\t{0} is {1}\n".format(g, mono))
+                    fh_log.write("\n\t{0}:\n\t\tStatus: {1}\n\t\tContents: {2} taxa\n".format(g, mono, len(dicts[g])))
+                    for taxon in dicts[g]:
+                        fh_log.write("\t\t\t{}\n".format(taxon))
                 else:
                     truth = "NA"
                     mono = "NA"
                     print("\t{0} contains only 1 taxon".format(g))
-                    fh_log.write("\t{0} contains only 1 taxon\n".format(g))
+                    fh_log.write("\n\t{0}:\n\t\tStatus: NA\n\t\tContents: {1} taxon\n".format(g, len(dicts[g])))
+                    for taxon in dicts[g]:
+                        fh_log.write("\t\t\t{}\n".format(taxon))
                 
                 if results[1] == "monophyletic" and len(dicts[g]) > 1:
                     internal_node = tree.get_common_ancestor(dicts[g])
@@ -300,8 +312,12 @@ def test_monophyly_support(label, dicts, tree):
                 else:
                     support = "NA"
                     
-                fh_out.write("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\n".format(g, len(dicts[g]), truth, mono,
-                                                                              support, len(names), ", ".join(names)))
+                if len(names) >= 500:
+                    fh_out.write("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\n".format(g, len(dicts[g]), truth,
+                                                                                  mono, support, len(names), "Exceeded 500 names max"))
+                else:  
+                    fh_out.write("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\n".format(g, len(dicts[g]), truth,
+                                                                                  mono, support, len(names), ", ".join(names)))
 
                 if mono == "Monophyletic":
                     mono_count += 1
