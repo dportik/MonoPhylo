@@ -1,4 +1,7 @@
-# MonoPhylo
+![MonoPhylo Logo](https://github.com/dportik/MonoPhylo/blob/master/MonoPhylo-Logo.png)
+
+
+A tool to check if groups are monophyletic on a phylogenetic tree.
 
 ---------------
 
