@@ -39,9 +39,6 @@ If you use **MonoPhylo** for your research, please cite the above publication.
 
 GNU Lesser General Public License v3.0
 
-## Contact
-
-MonoPhylo is written and maintained by Daniel Portik (daniel.portik@gmail.com).
 
 ## Instructions for Analyses and Tutorials
 
